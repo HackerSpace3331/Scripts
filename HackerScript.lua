@@ -9303,22 +9303,8 @@ addcmd("hipheight", {"hheight"}, function(args, speaker)
 	speaker.Character:FindFirstChildWhichIsA("Humanoid").HipHeight = args[1] or (r15(speaker) and 2.1 or 0)
 end)
 
-addcmd("dance", {}, function(args, speaker)
-	pcall(execCmd, "undance")
-	local dances = {"27789359", "30196114", "248263260", "45834924", "33796059", "28488254", "52155728"}
-	if r15(speaker) then
-		dances = {"3333432454", "4555808220", "4049037604", "4555782893", "10214311282", "10714010337", "10713981723", "10714372526", "10714076981", "10714392151", "11444443576"}
-	end
-	local animation = Instance.new("Animation")
-	animation.AnimationId = "rbxassetid://" .. dances[math.random(1, #dances)]
-	danceTrack = speaker.Character:FindFirstChildWhichIsA("Humanoid"):LoadAnimation(animation)
-	danceTrack.Looped = true
-	danceTrack:Play()
-end)
-
-addcmd("undance", {"nodance"}, function(args, speaker)
-	danceTrack:Stop()
-	danceTrack:Destroy()
+addcmd("emotegui", {}, function(args, speaker)
+	loadstring(game:HttpGetAsync("https://gist.githubusercontent.com/RedZenXYZ/3da6af1961efa275de6c3c2a6dbace03/raw/bb027f99cec0ea48ef9c5eabfb9116ddff20633d/FE%2520Emotes%2520Gui"))()
 end)
 
 addcmd('nolimbs',{'rlimbs'},function(args, speaker)
