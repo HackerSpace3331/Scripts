@@ -494,17 +494,6 @@ local Button = Tab:CreateButton({
 })
 
 local Button = Tab:CreateButton({
-	Name = "Delete Messages",
-	Callback = function()
-		for _, v in pairs(workspace:GetChildren()) do
-			if v:IsA("Message") then
-				v:Destroy()
-			end
-		end
-	end,
-})
-
-local Button = Tab:CreateButton({
 	Name = "3rd Person View In House",
 	Callback = function()
 	        game.Players.LocalPlayer.CameraMode = Enum.CameraMode.Classic
