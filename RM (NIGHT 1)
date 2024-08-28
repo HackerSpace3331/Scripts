@@ -314,17 +314,6 @@ local Toggle = Tab:CreateToggle({
 	end,
 })
 
-local Section = Tab:CreateSection("Buttons")
-
-local Button = Tab:CreateButton({
-	Name = "Inf Stamina",
-	Callback = function()
-		while wait() do
-		    game.Players.LocalPlayer.Character.Sprint.Overdrive.Value = 9999
-		end)
-	end,
-})
-
 
 -- CREDIT TO INFINITE YIELD FOR THE FLY, NOCLIP AND FULL BRIGHT!
 
