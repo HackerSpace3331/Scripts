@@ -557,6 +557,8 @@ local Toggle = Tab:CreateToggle({
 
 notify("", nil, "Script made by: Hacker#3331.")
 
+notify("", nil, "The main feature script is on my github.. so you can take it from github.com/Hacker3331")
+
 game:GetService("RunService").RenderStepped:Connect(function()
 	workspace.CurrentCamera.FieldOfView = FOV
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
