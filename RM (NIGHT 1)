@@ -304,7 +304,7 @@ local Toggle = Tab:CreateToggle({
 				if child.Name == "Mutant" then
 					notify("Larry")
 					if EntityEsp then
-						selection(child, "Monster")
+						selection(child, "Larry")
 					end
 				end
 			end)
