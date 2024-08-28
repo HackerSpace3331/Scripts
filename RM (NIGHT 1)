@@ -515,16 +515,6 @@ local Button = Tab:CreateButton({
 })
 
 local Button = Tab:CreateButton({
-	Name = "Auto Win",
-	Callback = function()
-		Noclipping()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1.69361448, 12.1499491, -88.5674133, 0.998951733, 2.22284466e-08, -0.0457758047, -2.18285425e-08, 1, 9.23600574e-09, 0.0457758047, -8.22710522e-09, 0.998951733)
-			end
-		end
-	end,
-})
-
-local Button = Tab:CreateButton({
 	Name = "Inf Battery",
 	Callback = function()
 		local plr = game.Players.LocalPlayer.Character
@@ -614,18 +604,6 @@ local Toggle = Tab:CreateToggle({
 	Flag = "EntityESP",
 	Callback = function(Value)
 		EntityEsp = Value
-	end,
-})
-
-local Tab = Window:CreateTab("Misc")
-local Section = Tab:CreateSection("Button")
-
-local Button = Tab:CreateButton({
-	Name = "Hacker Admin"
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/HackerAdminGames.lua"))()
-			end
-		end
 	end,
 })
 
