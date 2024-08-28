@@ -264,7 +264,7 @@ local Window = Rayfield:CreateWindow({
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = nil,
-		FileName = "Doors April Fools Helper"
+		FileName = "The Intruder (Subway)"
 	},
 	KeySystem = false,
 })
