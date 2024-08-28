@@ -264,7 +264,7 @@ local Window = Rayfield:CreateWindow({
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = nil,
-		FileName = "The Intruder (Subway)"
+		FileName = "RM [NIGHT 1]"
 	},
 	KeySystem = false,
 })
@@ -490,15 +490,6 @@ local Button = Tab:CreateButton({
 		game.Players.LocalPlayer.Character.Collision:GetPropertyChangedSignal("CanCollide"):Connect(function()
 			game.Players.LocalPlayer.Character.Collision.CanCollide = false
 		end)
-	end,
-})
-
-local Button = Tab:CreateButton({
-	Name = "3rd Person View In House",
-	Callback = function()
-	        game.Players.LocalPlayer.CameraMode = Enum.CameraMode.Classic
-			end
-		end
 	end,
 })
 
