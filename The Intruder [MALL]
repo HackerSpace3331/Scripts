@@ -258,13 +258,13 @@ end
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "Hacker Hub | The Intruder [SUBWAY]",
+	Name = "Hacker Hub | The Intruder [MALL]",
 	LoadingTitle = "Hacker Hub Loading...",
 	LoadingSubtitle = "by Hacker#3331.",
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = nil,
-		FileName = "The Intruder (Subway)"
+		FileName = "The Intruder (Mall)"
 	},
 	KeySystem = false,
 })
