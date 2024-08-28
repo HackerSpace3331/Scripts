@@ -526,25 +526,6 @@ local Button = Tab:CreateButton({
 	end,
 })
 
-local Button = Tab:CreateButton({
-	Name = "Inf Stamina",
-	Callback = function()
-		_G.InfStam
-			end
-		end
-	end,
-})
-
-spawn(function()
-	while wait() do
-		if _G.InfStam then
-			game.Players.LocalPlayer.Character.Sprint.Overdrive.Value = 9999
-		elseif not _G.InfStam then
-			
-		end
-	end
-end)
-
 local Section = Tab:CreateSection("Sliders")
 
 local Slider = Tab:CreateSlider({
