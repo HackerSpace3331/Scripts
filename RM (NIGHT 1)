@@ -264,7 +264,7 @@ local Window = Rayfield:CreateWindow({
 	ConfigurationSaving = {
 		Enabled = true,
 		FolderName = nil,
-		FileName = "RM NIGHT 1"
+		FileName = "The Intruder (Subway)"
 	},
 	KeySystem = false,
 })
@@ -290,7 +290,7 @@ local FOV = 70
 local Speed = 15
 local JumpPower = 25
 
-local Tab = Window:CreateTab("Main")
+local Tab = Window:CreateTab("Main", 16964919241)
 local Section = Tab:CreateSection("Toggles")
 
 local Toggle = Tab:CreateToggle({
@@ -554,7 +554,7 @@ local Slider = Tab:CreateSlider({
 	end,
 })
 
-local Tab = Window:CreateTab("ESP")
+local Tab = Window:CreateTab("ESP", 11043368148)
 local Section = Tab:CreateSection("Toggles")
 
 local Toggle = Tab:CreateToggle({
