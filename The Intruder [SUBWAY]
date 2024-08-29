@@ -110,6 +110,8 @@ local uiaspect_ratio_constraint = Instance.new("UIAspectRatioConstraint")
 uiaspect_ratio_constraint.AspectRatio = 1.107398509979248
 uiaspect_ratio_constraint.Parent = frame
 
+local e=game:GetService"ProximityPromptService"
+
 local function sound()
 	local notification = Instance.new("Sound", workspace)
 	notification.SoundId = "rbxassetid://5153734608"
@@ -576,5 +578,10 @@ notify("", nil, "Script made by: Hacker#3331.")
 game:GetService("RunService").RenderStepped:Connect(function()
 	workspace.CurrentCamera.FieldOfView = FOV
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPower
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+e.PromptButtonHoldBegan:Connect(function(x,y)
+fireproximityprompt(x)
+end
 end)
