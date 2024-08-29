@@ -573,6 +573,8 @@ local Toggle = Tab:CreateToggle({
 
 notify("", nil, "Script made by: Hacker#3331.")
 
+notify("", nil, "Promxity Cooldown has Bypassed!")
+
 game:GetService("RunService").RenderStepped:Connect(function()
 	workspace.CurrentCamera.FieldOfView = FOV
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
