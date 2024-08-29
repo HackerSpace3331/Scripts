@@ -578,3 +578,9 @@ game:GetService("RunService").RenderStepped:Connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPower
 end)
+
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+	if v:IsA("ProximityPrompt") then
+		v["HoldDuration"] = 0
+	end
+end
