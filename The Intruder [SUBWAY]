@@ -578,7 +578,7 @@ notify("", nil, "Script made by: Hacker#3331.")
 game:GetService("RunService").RenderStepped:Connect(function()
 	workspace.CurrentCamera.FieldOfView = FOV
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPower
 end)
 
 e.PromptButtonHoldBegan:Connect(function(x,y)
