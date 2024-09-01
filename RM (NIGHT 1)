@@ -255,19 +255,9 @@ function checkDistance(part, extra)
 	return false
 end
 
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = Rayfield:CreateWindow({
-	Name = "Hacker Hub | Residence Massacre [NIGHT 1]",
-	LoadingTitle = "Hacker Hub Loading...",
-	LoadingSubtitle = "by Hacker#3331.",
-	ConfigurationSaving = {
-		Enabled = true,
-		FolderName = nil,
-		FileName = "RM [NIGHT 1]"
-	},
-	KeySystem = false,
-})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Residence Massacre", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local killBricks
 local Eyes
@@ -290,10 +280,14 @@ local FOV = 70
 local Speed = 15
 local JumpPower = 25
 
-local Tab = Window:CreateTab("Main", 16964919241)
+local Main = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 local Section = Tab:CreateSection("Toggles")
 
-local Toggle = Tab:CreateToggle({
+local Toggle = Main:CreateToggle({
 	Name = "Entity Notifier",
 	CurrentValue = false,
 	Flag = "EntityNotifier",
@@ -304,7 +298,7 @@ local Toggle = Tab:CreateToggle({
 				if child.Name == "Mutant" then
 					notify("Larry")
 					if EntityEsp then
-						selection(child, "Larry")
+						selection(child, "Monster")
 					end
 				end
 			end)
@@ -426,7 +420,7 @@ local Toggle = Tab:CreateToggle({
 	end,
 })
 
-local Toggle = Tab:CreateToggle({
+local Toggle = Main:CreateToggle({
 	Name = "Noclip",
 	CurrentValue = false,
 	Flag = "Noclip",
@@ -453,7 +447,7 @@ local Toggle = Tab:CreateToggle({
 	end,
 })
 
-local Toggle = Tab:CreateToggle({
+local Toggle = Main:CreateToggle({
 	Name = "Full Bright",
 	CurrentValue = false,
 	Flag = "FullBright",
@@ -481,7 +475,7 @@ local Toggle = Tab:CreateToggle({
 
 local Section = Tab:CreateSection("Buttons")
 
-local Button = Tab:CreateButton({
+local Button = Main:CreateButton({
 	Name = "God Mode",
 	Callback = function()
 		game.Players.LocalPlayer.Character.Collision.Weld.C0 += Vector3.new(7, 0, 0)
@@ -493,9 +487,14 @@ local Button = Tab:CreateButton({
 	end,
 })
 
+local plr = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 local Section = Tab:CreateSection("Sliders")
 
-local Slider = Tab:CreateSlider({
+local Slider = plr:CreateSlider({
 	Name = "Walk Speed",
 	Range = {15, 21},
 	Increment = 0.5,
@@ -507,7 +506,7 @@ local Slider = Tab:CreateSlider({
 	end,
 })
 
-local Slider = Tab:CreateSlider({
+local Slider = plr:CreateSlider({
 	Name = "Jump Power",
 	Range = {0, 100},
 	Increment = 1,
@@ -519,7 +518,7 @@ local Slider = Tab:CreateSlider({
 	end,
 })
 
-local Slider = Tab:CreateSlider({
+local Slider = plr:CreateSlider({
 	Name = "Fly Speed",
 	Range = {0, 0.3},
 	Increment = 0.01,
@@ -531,7 +530,7 @@ local Slider = Tab:CreateSlider({
 	end,
 })
 
-local Slider = Tab:CreateSlider({
+local Slider = plr:CreateSlider({
 	Name = "Field Of View",
 	Range = {70, 120},
 	Increment = 1,
@@ -543,10 +542,14 @@ local Slider = Tab:CreateSlider({
 	end,
 })
 
-local Tab = Window:CreateTab("ESP", 11043368148)
+local esp = Window:MakeTab({
+	Name = "ESP",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 local Section = Tab:CreateSection("Toggles")
 
-local Toggle = Tab:CreateToggle({
+local Toggle = esp:CreateToggle({
 	Name = "Entity ESP",
 	CurrentValue = false,
 	Flag = "EntityESP",
