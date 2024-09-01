@@ -255,9 +255,19 @@ function checkDistance(part, extra)
 	return false
 end
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Residence Massacre", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = Rayfield:CreateWindow({
+	Name = "Hacker Hub | Residence Massacre [NIGHT 1]",
+	LoadingTitle = "Hacker Hub Loading...",
+	LoadingSubtitle = "by Hacker#3331.",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = nil,
+		FileName = "RM Night 1"
+	},
+	KeySystem = false,
+})
 
 local killBricks
 local Eyes
@@ -280,13 +290,10 @@ local FOV = 70
 local Speed = 15
 local JumpPower = 25
 
-local Main = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local Tab = Window:CreateTab("Main", 16964919241)
+local Section = Tab:CreateSection("Toggles")
 
-local Toggle = Main:CreateToggle({
+local Toggle = Tab:CreateToggle({
 	Name = "Entity Notifier",
 	CurrentValue = false,
 	Flag = "EntityNotifier",
@@ -294,10 +301,15 @@ local Toggle = Main:CreateToggle({
 		if Value then
 			EntityNotifier = workspace.ChildAdded:Connect(function(child)
 				task.wait(1)
-				if child.Name == "Mutant" then
-					notify("Larry")
+				if child.Name == "ScreamerRunBy" then
+					notify("The Screamer")
 					if EntityEsp then
-						selection(child, "Monster")
+						selection(child, "The Screamer")
+					end
+				elseif child.Name == "Caller" then
+					notify("The Caller")
+					if EntityEsp then
+						selection(child, "The Caller")
 					end
 				end
 			end)
@@ -404,7 +416,7 @@ function NOFLY()
 	pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Custom end)
 end
 
-local Toggle = Main:CreateToggle({
+local Toggle = Tab:CreateToggle({
 	Name = "Fly",
 	CurrentValue = false,
 	Flag = "Fly",
@@ -419,7 +431,7 @@ local Toggle = Main:CreateToggle({
 	end,
 })
 
-local Toggle = Main:CreateToggle({
+local Toggle = Tab:CreateToggle({
 	Name = "Noclip",
 	CurrentValue = false,
 	Flag = "Noclip",
@@ -446,7 +458,7 @@ local Toggle = Main:CreateToggle({
 	end,
 })
 
-local Toggle = Main:CreateToggle({
+local Toggle = Tab:CreateToggle({
 	Name = "Full Bright",
 	CurrentValue = false,
 	Flag = "FullBright",
@@ -472,7 +484,9 @@ local Toggle = Main:CreateToggle({
 	end,
 })
 
-local Button = Main:CreateButton({
+local Section = Tab:CreateSection("Buttons")
+
+local Button = Tab:CreateButton({
 	Name = "God Mode",
 	Callback = function()
 		game.Players.LocalPlayer.Character.Collision.Weld.C0 += Vector3.new(7, 0, 0)
@@ -484,14 +498,17 @@ local Button = Main:CreateButton({
 	end,
 })
 
-local plr = Window:MakeTab({
-	Name = "Player",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Button = Tab:CreateButton({
+	Name = "Main Feature",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/Games/MF%20Residence%20Massacre%20Night%201"))()
+		end
+	end,
 })
 
+local Section = Tab:CreateSection("Sliders")
 
-local Slider = plr:CreateSlider({
+local Slider = Tab:CreateSlider({
 	Name = "Walk Speed",
 	Range = {15, 21},
 	Increment = 0.5,
@@ -503,7 +520,7 @@ local Slider = plr:CreateSlider({
 	end,
 })
 
-local Slider = plr:CreateSlider({
+local Slider = Tab:CreateSlider({
 	Name = "Jump Power",
 	Range = {0, 100},
 	Increment = 1,
@@ -515,7 +532,7 @@ local Slider = plr:CreateSlider({
 	end,
 })
 
-local Slider = plr:CreateSlider({
+local Slider = Tab:CreateSlider({
 	Name = "Fly Speed",
 	Range = {0, 0.3},
 	Increment = 0.01,
@@ -527,7 +544,7 @@ local Slider = plr:CreateSlider({
 	end,
 })
 
-local Slider = plr:CreateSlider({
+local Slider = Tab:CreateSlider({
 	Name = "Field Of View",
 	Range = {70, 120},
 	Increment = 1,
@@ -539,13 +556,10 @@ local Slider = plr:CreateSlider({
 	end,
 })
 
-local esp = Window:MakeTab({
-	Name = "ESP",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local Tab = Window:CreateTab("ESP", 11043368148)
+local Section = Tab:CreateSection("Toggles")
 
-local Toggle = esp:CreateToggle({
+local Toggle = Tab:CreateToggle({
 	Name = "Entity ESP",
 	CurrentValue = false,
 	Flag = "EntityESP",
@@ -555,8 +569,6 @@ local Toggle = esp:CreateToggle({
 })
 
 notify("", nil, "Script made by: Hacker#3331.")
-
-notify("", nil, "The main feature script is on my github.. so you can take it from github.com/Hacker3331")
 
 game:GetService("RunService").RenderStepped:Connect(function()
 	workspace.CurrentCamera.FieldOfView = FOV
