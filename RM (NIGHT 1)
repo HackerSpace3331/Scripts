@@ -301,15 +301,10 @@ local Toggle = Tab:CreateToggle({
 		if Value then
 			EntityNotifier = workspace.ChildAdded:Connect(function(child)
 				task.wait(1)
-				if child.Name == "ScreamerRunBy" then
-					notify("The Screamer")
+				if child.Name == "Mutant" then
+					notify("Larry")
 					if EntityEsp then
-						selection(child, "The Screamer")
-					end
-				elseif child.Name == "Caller" then
-					notify("The Caller")
-					if EntityEsp then
-						selection(child, "The Caller")
+						selection(child, "Monster")
 					end
 				end
 			end)
