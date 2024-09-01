@@ -286,8 +286,6 @@ local Main = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Section = Main:CreateSection("Toggles")
-
 local Toggle = Main:CreateToggle({
 	Name = "Entity Notifier",
 	CurrentValue = false,
@@ -474,8 +472,6 @@ local Toggle = Main:CreateToggle({
 	end,
 })
 
-local Section = Main:CreateSection("Buttons")
-
 local Button = Main:CreateButton({
 	Name = "God Mode",
 	Callback = function()
@@ -494,7 +490,6 @@ local plr = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Section = Main:CreateSection("Sliders")
 
 local Slider = plr:CreateSlider({
 	Name = "Walk Speed",
@@ -549,8 +544,6 @@ local esp = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
-local Section = Main:CreateSection("Toggles")
 
 local Toggle = esp:CreateToggle({
 	Name = "Entity ESP",
