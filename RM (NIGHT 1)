@@ -285,7 +285,8 @@ local Main = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-local Section = Tab:CreateSection("Toggles")
+
+local Section = Main:CreateSection("Toggles")
 
 local Toggle = Main:CreateToggle({
 	Name = "Entity Notifier",
@@ -405,7 +406,7 @@ function NOFLY()
 	pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Custom end)
 end
 
-local Toggle = Tab:CreateToggle({
+local Toggle = Main:CreateToggle({
 	Name = "Fly",
 	CurrentValue = false,
 	Flag = "Fly",
@@ -473,7 +474,7 @@ local Toggle = Main:CreateToggle({
 	end,
 })
 
-local Section = Tab:CreateSection("Buttons")
+local Section = Main:CreateSection("Buttons")
 
 local Button = Main:CreateButton({
 	Name = "God Mode",
@@ -492,7 +493,8 @@ local plr = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-local Section = Tab:CreateSection("Sliders")
+
+local Section = Main:CreateSection("Sliders")
 
 local Slider = plr:CreateSlider({
 	Name = "Walk Speed",
@@ -547,7 +549,8 @@ local esp = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-local Section = Tab:CreateSection("Toggles")
+
+local Section = Main:CreateSection("Toggles")
 
 local Toggle = esp:CreateToggle({
 	Name = "Entity ESP",
