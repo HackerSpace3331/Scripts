@@ -502,7 +502,6 @@ local Button = Tab:CreateButton({
 	Name = "Main Feature",
 	Callback = function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/Games/MF%20Residence%20Massacre%20Night%201"))()
-		end
 	end,
 })
 
