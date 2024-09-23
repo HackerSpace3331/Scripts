@@ -4251,6 +4251,7 @@ end
 CMDs = {}
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Hacker Admin support server.'}
 CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads old Roblox console'}
+CMDs[#CMDs + 1] = {NAME = 'shiftmb / shiftlockmobile', DESC = 'Show GUI Shiftlock for mobile'}
 CMDs[#CMDs + 1] = {NAME = 'explorerpc / dexpc', DESC = 'Opens DEX By Moon [Only Work on PC/Laptop]'}
 CMDs[#CMDs + 1] = {NAME = 'explorermobile / dexmobile', DESC = 'Opens KEYLESS DEX Rework (ONLY Mobile)'}
 CMDs[#CMDs + 1] = {NAME = 'remotespy / rspy', DESC = 'Opens Simple Spy V3'}
@@ -10032,8 +10033,13 @@ addcmd('explorerpc', {'dexpc'}, function(args, speaker)
 end)
 
 addcmd('explorermobile', {'dexmobile'}, function(args, speaker)
-    notify('Loading old explorer', 'Hold on a sec')
+    notify('Loading Dex', 'Hold on a sec')
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/DEX-Explorer/main/Loader.lua"))()
+end)
+
+addcmd('shiftmb', {'shiftlockmobile'}, function(args, speaker)
+    notify('Shiftlock GUI has added!', 'Hold on a sec')
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/Hacker3331/refs/heads/main/Shiflock.lua"))()
 end)
 
 addcmd('remotespy',{'rspy'},function(args, speaker)
