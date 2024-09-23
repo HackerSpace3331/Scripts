@@ -10039,9 +10039,7 @@ end)
 
 addcmd('shiftmb', {'shiftlockmobile'}, function(args, speaker)
     notify('Notification', 'Shiftlock GUI has added!')
-    while wait() do
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/Hacker3331/refs/heads/main/Shiflock.lua"))()
-    end
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/Hacker3331/refs/heads/main/Shiflock.lua"))()
 end)
 
 addcmd('remotespy',{'rspy'},function(args, speaker)
