@@ -1,16 +1,16 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | ☢️The 63 Infection [BIG UPD!]", HidePremium = false, IntroText = "Loading script..", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | ☢️The 63 Infection [BIG UPD!]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 
 local Tab = Window:MakeTab({
-Name = "Main",
+Name = "Morph Teleport",
 Icon = "rbxassetid://4483345998",
 PremiumOnly = false
 })
 
 
 local Section = Tab:AddSection({
-Name = "Girl Morphs (Not fully added)"
+Name = "Not fully added"
 })
 
 
@@ -50,6 +50,65 @@ Tab:AddButton({
 	Callback = function()
       		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
          rootpart.CFrame = CFrame.new(-32.0792656, 3.59162045, -11792.7021, -0.99875021, -1.07674347e-09, 0.049979873, -6.10066619e-09, 1, -1.00366364e-07, -0.049979873, -1.0054584e-07, -0.99875021)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Pink Girl Morph (Maid Design)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(72.8958054, 3.81130743, -11782.3379, -0.999760747, -5.198849e-08, 0.021872865, -5.24132098e-08, 1, -1.88444353e-08, -0.021872865, -1.99863539e-08, -0.999760747)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Purple Girl Morph (Witch Design)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(207.299301, 3.81130743, -11779.6279, 0.0112510398, -2.42251885e-09, 0.9999367, -4.83898503e-08, 1, 2.96714275e-09, -0.9999367, -4.84201692e-08, 0.0112510398)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Black Girl Morph",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(265.075043, -21.111414, -11793.3994, -0.999969304, -1.43855718e-08, 0.00783772394, -1.4290114e-08, 1, 1.22351862e-08, -0.00783772394, 1.21228085e-08, -0.999969304)
+  	end    
+})
+
+
+local Tab2 = Window:MakeTab({
+Name = "Misc",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+Tab2:AddButton({
+	Name = "Hacker Admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/HackerAdminGames.lua"))()
+  	end    
+})
+
+
+local Tab3 = Window:MakeTab({
+Name = "Credit",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+local Section = Tab3:AddSection({
+Name = "Made by Hacker3331"
+})
+
+
+Tab3:AddButton({
+	Name = "Github",
+	Callback = function()
+      		setclipboard("github.com/Hacker3331")
   	end    
 })
 
