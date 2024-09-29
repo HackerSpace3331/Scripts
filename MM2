@@ -9,47 +9,6 @@ PremiumOnly = false
 })
 
 
-local Section = Tab:AddSection({
-Name = "Murderer is: Unknown"
-})
-
-local Section = Tab:AddSection({
-Name = "Sheriff is: Unknown"
-})
-
-local function updateRolesInfo()
-    while true do
-        local players = game:GetService("Players"):GetPlayers()
-        local murderer, sheriff = "Unknown", "Unknown"
-
-        for _, player in ipairs(players) do
-            if player.Character then
-                local backpack = player.Backpack
-                if backpack then
-                    for _, tool in ipairs(backpack:GetChildren()) do
-                        if tool:IsA("Tool") then
-                            if tool.Name == "Knife" then
-                                murderer = player.Name
-                            elseif tool.Name == "Gun" then
-                                sheriff = player.Name
-                            end
-                        end
-                    end
-                end
-            end
-        end
-
-        MurdererLabel:Set("Murderer is: " .. murderer)
-        SheriffLabel:Set("Sheriff is: " .. sheriff)
-
-        wait(1)
-    end
-end
-
--- Start updating the Murderer and Sheriff information
-coroutine.wrap(updateRolesInfo)()
-
-
 OrionLib:MakeNotification({
 Name = "Hacker Notification",
 Content = "Hacker Hub Made By Hacker3331",
