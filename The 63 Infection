@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | ☢️The 63 Infection [BIG UPD!]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "Hacker Hub"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | ☢️The 63 Infection [BIG UPD!]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub 63 Infection"})
 
 
 local Tab = Window:MakeTab({
