@@ -1,0 +1,179 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Murder Mystery 2", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+local Tab = Window:MakeTab({
+Name = "Main",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+Name = "Murderer is: Unknown"
+})
+
+local Section = Tab:AddSection({
+Name = "Sheriff is: Unknown"
+})
+
+local function updateRolesInfo()
+    while true do
+        local players = game:GetService("Players"):GetPlayers()
+        local murderer, sheriff = "Unknown", "Unknown"
+
+        for _, player in ipairs(players) do
+            if player.Character then
+                local backpack = player.Backpack
+                if backpack then
+                    for _, tool in ipairs(backpack:GetChildren()) do
+                        if tool:IsA("Tool") then
+                            if tool.Name == "Knife" then
+                                murderer = player.Name
+                            elseif tool.Name == "Gun" then
+                                sheriff = player.Name
+                            end
+                        end
+                    end
+                end
+            end
+        end
+
+        MurdererLabel:Set("Murderer is: " .. murderer)
+        SheriffLabel:Set("Sheriff is: " .. sheriff)
+
+        wait(1)
+    end
+end
+
+-- Start updating the Murderer and Sheriff information
+coroutine.wrap(updateRolesInfo)()
+
+
+OrionLib:MakeNotification({
+Name = "Hacker Notification",
+Content = "Hacker Hub Made By Hacker3331",
+Image = "rbxassetid://4483345998",
+Time = 10
+})
+
+
+Tab:AddButton({
+	Name = "Gun Grabber",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = game:GetService("Workspace").Normal.GunDrop.CFrame
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Chat Expose Role",
+	Callback = function()
+      		local allPlayers = game.Players:GetPlayers()
+
+for _, player in pairs(allPlayers) do
+    local backpack = player:FindFirstChild("Backpack")
+    
+    if backpack then
+        if backpack:FindFirstChild("Knife") then
+            local args = {
+                [1] = player.Name .. ": Has The Knife",
+                [2] = "normalchat"
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+        end
+        
+        if backpack:FindFirstChild("Gun") then
+            local args = {
+                [1] = player.Name .. ": Has The Gun",
+                [2] = "normalchat"
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+        end
+    end
+end
+   end,
+})
+
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Cyan Girl Morph",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(64.9463348, 3.59161997, -11806.1836, 0.995331943, 2.54931964e-09, -0.0965106562, -2.03464201e-09, 1, 5.4312701e-09, 0.0965106562, -5.2095519e-09, 0.995331943)
+    end
+})
+
+Tab:AddButton({
+	Name = "Green Girl Morph (Hacker Design)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(-32.0792656, 3.59162045, -11792.7021, -0.99875021, -1.07674347e-09, 0.049979873, -6.10066619e-09, 1, -1.00366364e-07, -0.049979873, -1.0054584e-07, -0.99875021)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Pink Girl Morph (Maid Design)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(72.8958054, 3.81130743, -11782.3379, -0.999760747, -5.198849e-08, 0.021872865, -5.24132098e-08, 1, -1.88444353e-08, -0.021872865, -1.99863539e-08, -0.999760747)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Purple Girl Morph (Witch Design)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(207.299301, 3.81130743, -11779.6279, 0.0112510398, -2.42251885e-09, 0.9999367, -4.83898503e-08, 1, 2.96714275e-09, -0.9999367, -4.84201692e-08, 0.0112510398)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Black Girl Morph",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(265.075043, -21.111414, -11793.3994, -0.999969304, -1.43855718e-08, 0.00783772394, -1.4290114e-08, 1, 1.22351862e-08, -0.00783772394, 1.21228085e-08, -0.999969304)
+  	end    
+})
+
+
+local Tab2 = Window:MakeTab({
+Name = "Misc",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+Tab2:AddButton({
+	Name = "Hacker Admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/HackerAdminGames.lua"))()
+  	end    
+})
+
+
+local Tab3 = Window:MakeTab({
+Name = "Credit",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+local Section = Tab3:AddSection({
+Name = "Made by Hacker3331"
+})
+
+
+Tab3:AddButton({
+	Name = "Github",
+	Callback = function()
+      		setclipboard("github.com/Hacker3331")
+  	end    
+})
+
+
+OrionLib:Init()
