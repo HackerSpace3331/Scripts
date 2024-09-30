@@ -4253,7 +4253,7 @@ CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Hack
 CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads old Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'shiftmb / shiftlockmobile', DESC = 'Show GUI Shiftlock for mobile'}
 CMDs[#CMDs + 1] = {NAME = 'explorerpc / dexpc', DESC = 'Opens DEX By Moon [Only Work on PC/Laptop]'}
-CMDs[#CMDs + 1] = {NAME = 'explorermobile / dexmobile', DESC = 'Opens KEYLESS DEX Rework (ONLY Mobile)'}
+CMDs[#CMDs + 1] = {NAME = 'explorermobile / dexmobile', DESC = 'Open DEX MOBILE WITHOUT KEY! (ONLY Mobile)'}
 CMDs[#CMDs + 1] = {NAME = 'remotespy / rspy', DESC = 'Opens Simple Spy V3'}
 CMDs[#CMDs + 1] = {NAME = 'audiologger / alogger', DESC = 'Opens Edges audio logger'}
 CMDs[#CMDs + 1] = {NAME = 'serverinfo / info', DESC = 'Gives you info about the server'}
@@ -10034,7 +10034,7 @@ end)
 
 addcmd('explorermobile', {'dexmobile'}, function(args, speaker)
     notify('Loading Dex', 'Hold on a sec')
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/DEX-Explorer/main/Loader.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/DEX-Explorer/main/Mobile.lua"))()
 end)
 
 addcmd('shiftmb', {'shiftlockmobile'}, function(args, speaker)
