@@ -2,15 +2,15 @@ local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))
 local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Super Fun Obby", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub Super Fun Obby"})
 
 
-local Section = Tab:AddSection({
-Name = "Use fly cmd on Hacker Admin, while getting the rainbow carpet"
-})
-
-
 local Tab = Window:MakeTab({
 Name = "Main",
 Icon = "rbxassetid://4483345998",
 PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+Name = "Use fly cmd on Hacker Admin, while getting the rainbow carpet"
 })
 
 
