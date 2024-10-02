@@ -36,7 +36,7 @@ Tab:AddButton({
 	Name = "Giver Rainbow Carpet",
 	Callback = function()
       		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
-                rootpart.CFrame = CFrame.new(-1014.84045, 123.66526, -2562.65576, -0.000282406807, 0.766112506, -0.642706335, 0.99999994, 0.000240802765, -0.000152558088, 3.78489494e-05, -0.642706394, -0.766112566)
+                rootpart.CFrame = CFrame.new(-1014.84314, 126.465256, -2562.65527, -0.815832496, 5.14930534e-08, -0.578288257, 2.30395933e-08, 1, 5.65403191e-08, 0.578288257, 3.28039036e-08, -0.815832496)
   	end    
 })
 
