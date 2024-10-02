@@ -102,8 +102,7 @@ Tab:AddToggle({
             if billboard:IsA("BillboardGui") then
                 local playerName = billboard.Name:sub(1, -10)
                 local player = game.Players:FindFirstChild(playerName)
-                        billboard.Enabled = state
-                end
+                billboard.Enabled = state
             end
         end
     end,
