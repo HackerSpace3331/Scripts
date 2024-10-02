@@ -105,7 +105,7 @@ Tab:AddToggle({
                 if player and player.Character then
                     local hasKnife = player.Character:FindFirstChild("Knife") or player.Backpack:FindFirstChild("Knife")
                     local hasGun = player.Character:FindFirstChild("Gun") or player.Backpack:FindFirstChild("Gun")
-                    if not (hasKnife or hasGun) then
+                    if not hasKnife and hasGun then
                         billboard.Enabled = state
                     end
                 end
