@@ -108,40 +108,6 @@ Tab:AddToggle({
     end,
 })
 
-Tab:AddToggle({
-	Name = "Murder ESP",
-	Default = false,
-	Callback = function(state)
-    getgenv().MurderEsp = state
-        for _, billboard in ipairs(ESPFolder:GetChildren()) do
-            if billboard:IsA("BillboardGui") then
-                local playerName = billboard.Name:sub(1, -10)
-                local player = game.Players:FindFirstChild(playerName)
-                if player and (player.Character:FindFirstChild("Knife") or player.Backpack:FindFirstChild("Knife")) then
-                    billboard.Enabled = state
-                end
-            end
-        end
-	  end,    
-})
-
-Tab:AddToggle({
-	Name = "Sherif ESP",
-	Default = false,
-	Callback = function(state)
-		getgenv().SheriffEsp = state
-        for _, billboard in ipairs(ESPFolder:GetChildren()) do
-            if billboard:IsA("BillboardGui") then
-                local playerName = billboard.Name:sub(1, -10)
-                local player = game.Players:FindFirstChild(playerName)
-                if player and (player.Character:FindFirstChild("Gun") or player.Backpack:FindFirstChild("Gun")) then
-                    billboard.Enabled = state
-                end
-            end
-        end
-	  end,    
-})
-
 
 local Tab2 = Window:MakeTab({
 Name = "Misc",
