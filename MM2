@@ -22,7 +22,7 @@ Tab:AddButton({
 	Callback = function()
       		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
          rootpart.CFrame = game:GetService("Workspace").Normal.GunDrop.CFrame
-  	end    
+    end,
 })
 
 Tab:AddButton({
