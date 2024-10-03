@@ -33,7 +33,15 @@ Tab:AddButton({
 
         if Emotes then
             require(game:GetService("ReplicatedStorage").Modules.EmoteModule).GeneratePage({"headless", "zombie", "zen", "ninja", "floss", "dab", "sit"}, Emotes, "Free Emotes")
-  end
+
+            OrionLib:MakeNotification({
+	           Name = "Title!",
+	           Content = "Notification content... what will it say??",
+	           Image = "rbxassetid://4483345998",
+	           Time = 6.5
+            })
+        end
+   end,
 })
 
 
