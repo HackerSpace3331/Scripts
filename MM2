@@ -98,7 +98,7 @@ Tab:AddToggle({
 	Default = false,
 	Callback = function(state)
 		getgenv().AllEsp = state
-        for _, billboard in ipairs(ESPFolder:GetChildren()) do
+        for _, billboard in pairs(ESPFolder:GetChildren()) do
             if billboard:IsA("BillboardGui") then
                 local playerName = billboard.Name:sub(1, -10)
                 local player = game.Players:FindFirstChild(playerName)
