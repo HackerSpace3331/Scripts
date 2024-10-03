@@ -25,6 +25,17 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Get All Emote (If die or reset the ui of emote will gone)",
+	Callback = function()
+      		local PlayerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+        local Emotes = PlayerGui:WaitForChild("MainGUI"):WaitForChild("Game"):FindFirstChild("Emotes")
+
+        if Emotes then
+            require(game:GetService("ReplicatedStorage").Modules.EmoteModule).GeneratePage({"headless", "zombie", "zen", "ninja", "floss", "dab", "sit"}, Emotes, "Free Emotes")
+  	end    
+})
+
 
 local ESPFolder = Instance.new("Folder")
 ESPFolder.Name = "ESP Holder"
@@ -94,7 +105,7 @@ end)
 
 
 Tab:AddToggle({
-	Name = "All Player ESP",
+	Name = "All Player ESP (will show murder and sherif esp to)",
 	Default = false,
 	Callback = function(state)
 		getgenv().AllEsp = state
