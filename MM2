@@ -33,8 +33,7 @@ Tab:AddButton({
 
         if Emotes then
             require(game:GetService("ReplicatedStorage").Modules.EmoteModule).GeneratePage({"headless", "zombie", "zen", "ninja", "floss", "dab", "sit"}, Emotes, "Free Emotes")
-  	end
-    end,
+  end
 })
 
 
