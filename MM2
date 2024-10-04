@@ -1,0 +1,166 @@
+local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Murder Mystery 2", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub MM2"})
+
+
+local Tab = Window:MakeTab({
+Name = "Main",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+OrionLib:MakeNotification({
+Name = "Hacker Notification",
+Content = "Hacker Hub Made By Hacker3331",
+Image = "rbxassetid://4483345998",
+Time = 10
+})
+
+
+Tab:AddButton({
+	Name = "Gun Grabber",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = game:GetService("Workspace").Normal.GunDrop.CFrame
+    end,
+})
+
+Tab:AddButton({
+	Name = "Get All Emote (Die or reset make the ui of emote will gone)",
+	Callback = function()
+      		local PlayerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+        local Emotes = PlayerGui:WaitForChild("MainGUI"):WaitForChild("Game"):FindFirstChild("Emotes")
+
+        if Emotes then
+            require(game:GetService("ReplicatedStorage").Modules.EmoteModule).GeneratePage({"headless", "zombie", "zen", "ninja", "floss", "dab", "sit"}, Emotes, "Free Emotes")
+
+            OrionLib:MakeNotification({
+	           Name = "Hacker Notification",
+	           Content = "Successfully added emote",
+	           Image = "rbxassetid://4483345998",
+	           Time = 6.5
+            })
+        end
+   end,
+})
+
+
+local ESPFolder = Instance.new("Folder")
+ESPFolder.Name = "ESP Holder"
+ESPFolder.Parent = game.CoreGui
+
+local function AddBillboard(player)
+    local Billboard = Instance.new("BillboardGui")
+    Billboard.Name = player.Name .. "Billboard"
+    Billboard.AlwaysOnTop = true
+    Billboard.Size = UDim2.new(0, 200, 0, 50)
+    Billboard.ExtentsOffset = Vector3.new(0, 3, 0)
+    Billboard.Enabled = false
+    Billboard.Parent = ESPFolder
+
+    local TextLabel = Instance.new("TextLabel")
+    TextLabel.TextSize = 20
+    TextLabel.Text = player.Name
+    TextLabel.Font = Enum.Font.FredokaOne
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Size = UDim2.new(1, 0, 1, 0)
+    TextLabel.TextStrokeTransparency = 0
+    TextLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+    TextLabel.Parent = Billboard
+
+    repeat
+        wait()
+        pcall(function()
+            Billboard.Adornee = player.Character.Head
+            if player.Character:FindFirstChild("Knife") or player.Backpack:FindFirstChild("Knife") then
+                TextLabel.TextColor3 = Color3.new(1, 0, 0)
+                if getgenv().MurderEsp then
+                    Billboard.Enabled = true
+                end
+            elseif player.Character:FindFirstChild("Gun") or player.Backpack:FindFirstChild("Gun") then
+                TextLabel.TextColor3 = Color3.new(0, 0, 1)
+                if getgenv().SheriffEsp then
+                    Billboard.Enabled = true
+                end
+            else
+                TextLabel.TextColor3 = Color3.new(0, 1, 0)
+                if getgenv().AllEsp then
+                    Billboard.Enabled = true
+                end
+            end
+        end)
+    until not player.Parent
+end
+
+for _, player in pairs(game.Players:GetPlayers()) do
+    if player ~= game.Players.LocalPlayer then
+        coroutine.wrap(AddBillboard)(player)
+    end
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+    if player ~= game.Players.LocalPlayer then
+        coroutine.wrap(AddBillboard)(player)
+    end
+end)
+
+game.Players.PlayerRemoving:Connect(function(player)
+    local billboard = ESPFolder:FindFirstChild(player.Name .. "Billboard")
+    if billboard then
+        billboard:Destroy()
+    end
+end)
+
+
+Tab:AddToggle({
+	Name = "All Player ESP (will show murder and sherif esp to)",
+	Default = false,
+	Callback = function(state)
+		getgenv().AllEsp = state
+        for _, billboard in pairs(ESPFolder:GetChildren()) do
+            if billboard:IsA("BillboardGui") then
+                local playerName = billboard.Name:sub(1, -10)
+                local player = game.Players:FindFirstChild(playerName)
+                billboard.Enabled = state
+            end
+        end
+    end,
+})
+
+
+local Tab2 = Window:MakeTab({
+Name = "Misc",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+Tab2:AddButton({
+	Name = "Hacker Admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/HackerAdminGames.lua"))()
+  	end    
+})
+
+
+local Tab3 = Window:MakeTab({
+Name = "Credit",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+local Section = Tab3:AddSection({
+Name = "Made by Hacker3331"
+})
+
+
+Tab3:AddButton({
+	Name = "Github",
+	Callback = function()
+      		setclipboard("github.com/Hacker3331")
+  	end    
+})
+
+
+OrionLib:Init()
