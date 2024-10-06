@@ -45,6 +45,14 @@ Name = "Neko Morph Teleport (If the Grab skill is doesnt work you must rejoin)"
 
 
 Tab:AddButton({
+	Name = "Mummy Girl Morph (Halloween Event)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(68.2809525, -14.4083815, -11790.6826, -0.0791984424, 0, 0.996858835, 0, 1.00000012, -0, -0.996858954, 0, -0.0791984349)
+  	end    
+})
+
+Tab:AddButton({
 	Name = "White Girl Morph",
 	Callback = function()
       		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
