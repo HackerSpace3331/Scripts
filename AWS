@@ -54,7 +54,7 @@ OrionLib:MakeNotification({
 Name = "Hacker Notification",
 Content = "Proximity Prompt has bypassed!",
 Image = "rbxassetid://16103628265",
-Time = 10
+Time = 5
 })
 
 
