@@ -94,11 +94,6 @@ PremiumOnly = false
 })
 
 
-local Section = Tab:AddSection({
-Name = "ESP is still laggy.. recommend using esp on solo or with friend in private"
-})
-
-
 OrionLib:MakeNotification({
 Name = "Hacker Notification",
 Content = "Hacker Hub Made By Hacker3331",
