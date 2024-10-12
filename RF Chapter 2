@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Rainbow Friend Chapter 2", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RAINBOW FRIEND 2"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Rainbow Friend [All Chapter]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RAINBOW FRIEND 2"})
 
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
@@ -88,7 +88,7 @@ end
 
 
 local Tab = Window:MakeTab({
-Name = "Main",
+Name = "Chapter 2",
 Icon = "rbxassetid://4483345998",
 PremiumOnly = false
 })
