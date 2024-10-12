@@ -1,5 +1,6 @@
+if game.PlaceId == 13622981808 then --Chapter 2
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Rainbow Friend [Chapter 2]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RAINBOW FRIEND 2"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Rainbow Friend Chapter 2", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RAINBOW FRIEND 2"})
 
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
@@ -15,7 +16,8 @@ _G.espMonster = true
 
 
 function espItem()
-    if _G.espItem == true then
+    while _G.espItem == true do
+        wait()
         ESP:AddObjectListener(Workspace, {
         Name = "LightBulb",
         CustomName = "Light Bulbs",
@@ -51,7 +53,8 @@ function espItem()
 end
 
 function espMonster()
-    if _G.espMonster == true then
+    while _G.espMonster == true do
+        wait()
         ESP:AddObjectListener(Workspace.Monsters, {
         Name = "Blue",
         CustomName = "Blue",
@@ -103,7 +106,7 @@ PremiumOnly = false
 
 
 local Section = Tab:AddSection({
-Name = "ESP is still lag.. recommend using esp on solo or with friend in private"
+Name = "ESP is still laggy.. recommend using esp on solo or with friend in private"
 })
 
 
@@ -123,22 +126,20 @@ Tab:AddToggle({
 	end    
 })
 
-Tab:AddToggle({
-	Name = "ESP Item (Buggy sometime..)",
-	Default = false,
+Tab:AddButton({
+	Name = "ESP Item",
 	Callback = function(Value)
-		_G.espItem = Value
-    espItem()
-	end    
+      		_G.espItem = Value
+         espItem()
+  	end    
 })
 
-Tab:AddToggle({
+Tab:AddButton({
 	Name = "ESP Monster",
-	Default = false,
 	Callback = function(Value)
-		_G.espMonster = Value
-    espMonster()
-	end    
+      		_G.espMonster = Value
+         espMonster()
+  	end    
 })
 
 
