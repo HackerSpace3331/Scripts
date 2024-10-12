@@ -1,0 +1,183 @@
+if game.PlaceId == "13622981808" then
+local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Rainbow Friend [Chapter 2]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RAINBOW FRIEND 2"})
+
+-- loadstring
+local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+
+-- config
+ESP.Boxes = false
+ESP.Names = true
+ESP:Toggle(true)
+
+
+_G.espItem = true
+_G.espMonster = true
+
+
+function espItem()
+    while _G.espItem == true do
+        wait()
+        ESP:AddObjectListener(Workspace, {
+        Name = "LightBulb",
+        CustomName = "Light Bulbs",
+        Color = Color3.fromRGB(0, 255, 0), 
+        IsEnabled = "light" 
+        })
+        ESP.light = true
+
+        ESP:AddObjectListener(Workspace, {
+        Name = "GasCanister",
+        CustomName = "Gas Canister",
+        Color = Color3.fromRGB(0, 255, 0), 
+        IsEnabled = "gas" 
+        })
+        ESP.gas = true
+
+        ESP:AddObjectListener(Workspace.ignore, {
+        Name = "Looky",
+        CustomName = "Lookies",
+        Color = Color3.fromRGB(0, 255, 0), 
+        IsEnabled = "looky" 
+        })
+        ESP.looky = true
+
+        ESP:AddObjectListener(Workspace, {
+        Name = "CakeMix",
+        CustomName = "Milk",
+        Color = Color3.fromRGB(0, 255, 0), 
+        IsEnabled = "milk" 
+        })
+        ESP.milk = true
+    end
+end
+
+function espMonster()
+    while _G.espMonster == true do
+        wait()
+        ESP:AddObjectListener(Workspace.Monsters, {
+        Name = "Blue",
+        CustomName = "Blue",
+        Color = Color3.fromRGB(255, 0, 0), 
+        IsEnabled = "blue" 
+        })
+        ESP.blue = true
+
+        ESP:AddObjectListener(Workspace.Monsters, {
+        Name = "Green",
+        CustomName = "Green",
+        Color = Color3.fromRGB(255, 0, 0), 
+        IsEnabled = "green" 
+        })
+        ESP.green = true
+
+        ESP:AddObjectListener(Workspace.Monsters, {
+        Name = "Purple",
+        CustomName = "Purple",
+        Color = Color3.fromRGB(255, 0, 0), 
+        IsEnabled = "pur" 
+        })
+        ESP.pur = true
+
+        ESP:AddObjectListener(Workspace.Monsters, {
+        Name = "Bird",
+        CustomName = "Yellow Bird",
+        Color = Color3.fromRGB(255, 0, 0), 
+        IsEnabled = "yel" 
+        })
+        ESP.yel = true
+
+        ESP:AddObjectListener(Workspace.Monsters, {
+        Name = "Cyan",
+        CustomName = "Cyan",
+        Color = Color3.fromRGB(255, 0, 0), 
+        IsEnabled = "cyan" 
+        })
+        ESP.cyan = true
+    end
+end
+
+
+local Tab = Window:MakeTab({
+Name = "Main",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+Name = "ESP is still buggy.. recommend using esp on solo or with friend"
+})
+
+
+OrionLib:MakeNotification({
+Name = "Hacker Notification",
+Content = "Hacker Hub Made By Hacker3331",
+Image = "rbxassetid://16103628265",
+Time = 10
+})
+
+
+Tab:AddToggle({
+	Name = "ESP Player",
+	Default = false,
+	Callback = function(Value)
+    ESP.Players = Value
+	end    
+})
+
+Tab:AddToggle({
+	Name = "ESP Item (Buggy sometime..)",
+	Default = false,
+	Callback = function(Value)
+		_G.espItem = Value
+    espItem()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "ESP Monster",
+	Default = false,
+	Callback = function(Value)
+		_G.espMonster = Value
+    espMonster()
+	end    
+})
+
+
+local Tab2 = Window:MakeTab({
+Name = "Misc",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+Tab2:AddButton({
+	Name = "Hacker Admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/HackerAdminGames.lua"))()
+  	end    
+})
+
+
+local Tab3 = Window:MakeTab({
+Name = "Credit",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+local Section = Tab3:AddSection({
+Name = "Made by Hacker3331"
+})
+
+
+Tab3:AddButton({
+	Name = "Github",
+	Callback = function()
+      		setclipboard("github.com/Hacker3331")
+  	end    
+})
+
+
+OrionLib:Init()
