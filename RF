@@ -15,8 +15,7 @@ _G.espMonster = true
 
 
 function espItem()
-    while _G.espItem == true do
-        wait()
+    if _G.espItem == true then
         ESP:AddObjectListener(Workspace, {
         Name = "LightBulb",
         CustomName = "Light Bulbs",
@@ -52,8 +51,7 @@ function espItem()
 end
 
 function espMonster()
-    while _G.espMonster == true do
-        wait()
+    if _G.espMonster == true then
         ESP:AddObjectListener(Workspace.Monsters, {
         Name = "Blue",
         CustomName = "Blue",
@@ -105,7 +103,7 @@ PremiumOnly = false
 
 
 local Section = Tab:AddSection({
-Name = "ESP is still buggy.. recommend using esp on solo or with friend"
+Name = "ESP is still lag.. recommend using esp on solo or with friend in private"
 })
 
 
