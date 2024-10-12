@@ -10,8 +10,33 @@ ESP.Names = true
 ESP:Toggle(true)
 
 
-function espItem()
-        ESP:AddObjectListener(Workspace, {
+local Tab = Window:MakeTab({
+Name = "Chapter 2",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+OrionLib:MakeNotification({
+Name = "Hacker Notification",
+Content = "Hacker Hub Made By Hacker3331",
+Image = "rbxassetid://16103628265",
+Time = 10
+})
+
+
+Tab:AddToggle({
+	Name = "ESP Player",
+	Default = false,
+	Callback = function(Value)
+    ESP.Players = Value
+	end    
+})
+
+Tab:AddButton({
+	Name = "ESP Item",
+	Callback = function()
+         ESP:AddObjectListener(Workspace, {
         Name = "LightBulb",
         CustomName = "Light Bulbs",
         Color = Color3.fromRGB(0, 255, 0), 
@@ -42,10 +67,13 @@ function espItem()
         IsEnabled = "milk" 
         })
         ESP.milk = true
-end
+  end    
+})
 
-function espMonster()
-        ESP:AddObjectListener(Workspace.Monsters, {
+Tab:AddButton({
+	Name = "ESP Monster",
+	Callback = function()
+         ESP:AddObjectListener(Workspace.Monsters, {
         Name = "Blue",
         CustomName = "Blue",
         Color = Color3.fromRGB(255, 0, 0), 
@@ -84,44 +112,7 @@ function espMonster()
         IsEnabled = "cyan" 
         })
         ESP.cyan = true
-end
-
-
-local Tab = Window:MakeTab({
-Name = "Chapter 2",
-Icon = "rbxassetid://4483345998",
-PremiumOnly = false
-})
-
-
-OrionLib:MakeNotification({
-Name = "Hacker Notification",
-Content = "Hacker Hub Made By Hacker3331",
-Image = "rbxassetid://16103628265",
-Time = 10
-})
-
-
-Tab:AddToggle({
-	Name = "ESP Player",
-	Default = false,
-	Callback = function(Value)
-    ESP.Players = Value
-	end    
-})
-
-Tab:AddButton({
-	Name = "ESP Item",
-	Callback = function()
-         espItem()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "ESP Monster",
-	Callback = function()
-         espMonster()
-  	end    
+  end    
 })
 
 
