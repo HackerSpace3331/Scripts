@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Interliminality [Halloween Event]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub Interliminality Halloween"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Interliminality [All Chapter]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub Interliminality Halloween"})
 
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
@@ -11,7 +11,7 @@ ESP:Toggle(true)
 
 
 local Tab = Window:MakeTab({
-Name = "Main",
+Name = "Halloween Event 🎃",
 Icon = "rbxassetid://4483345998",
 PremiumOnly = false
 })
