@@ -87,6 +87,30 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Teleport elevator (Minigame 7)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(211.487411, 3.59999967, 22.5221825, 0.0410340093, 1.76314412e-08, -0.999157727, -6.01000778e-08, 1, 1.51780775e-08, 0.999157727, 5.94266361e-08, 0.0410340093)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Teleport elevator (Minigame 8)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(-104.367058, -6.97945833, -875.151672, -0.00219774409, -3.57434402e-08, -0.999997556, 1.48598751e-08, 1, -3.57761856e-08, 0.999997556, -1.49384665e-08, -0.00219774409)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Teleport elevator (Minigame 9)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(32.5088577, 3.00999951, 493.563995, 0.0570050292, -2.76093655e-08, 0.998373866, 7.63514123e-08, 1, 2.3294831e-08, -0.998373866, 7.4899333e-08, 0.0570050292)
+  	end    
+})
+
 
 local Tab2 = Window:MakeTab({
 Name = "Halloween Event 🎃",
