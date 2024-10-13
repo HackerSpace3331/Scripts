@@ -1,0 +1,135 @@
+local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Interliminality [Halloween Event]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub Interliminality Halloween"})
+
+-- loadstring
+local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+
+-- config
+ESP.Boxes = false
+ESP.Names = true
+ESP:Toggle(true)
+
+
+local Tab = Window:MakeTab({
+Name = "Main",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+OrionLib:MakeNotification({
+Name = "Hacker Notification",
+Content = "Hacker Hub Made By Hacker3331",
+Image = "rbxassetid://16103628265",
+Time = 10
+})
+
+
+Tab:AddToggle({
+	Name = "ESP Player",
+	Default = false,
+	Callback = function(Value)
+		ESP.Players = Value
+	end    
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Minigame 1"
+})
+
+
+Tab:AddButton({
+	Name = "ESP All",
+	Callback = function()
+      		ESP:AddObjectListener(Workspace.Puzzle.Pumpkins, {
+         Name = "pumpkin",
+         CustomName = "Pumbkin",
+         Color = Color3.fromRGB(0, 255, 0), 
+         IsEnabled = "pumb" 
+         })
+         ESP.pumb = true
+
+         ESP:AddObjectListener(Workspace.NPCS, {
+         Name = "Entity",
+         CustomName = "Monster",
+         Color = Color3.fromRGB(255, 0, 0), 
+         IsEnabled = "monster" 
+         })
+         ESP.monster = true
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Teleport to Exit Room (If you alr collect all pumbkin)",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(-49.3997192, 5.55001831, 162.899963, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+  	end    
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Minigame 2"
+})
+
+
+Tab:AddButton({
+	Name = "Teleport to exit elevator",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = game:GetService("Workspace").ExitElevator.Invisible.CFrame
+  	end    
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Minigame 3 [FINAL]"
+})
+
+
+Tab:AddButton({
+	Name = "Teleport to last elevator",
+	Callback = function()
+      		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+         rootpart.CFrame = CFrame.new(20.7504025, 4.09998894, 5.02151489, -0.0310282651, 2.25436647e-08, 0.999518514, -3.21166773e-08, 1, -2.35515287e-08, -0.999518514, -3.28319736e-08, -0.0310282651)
+  	end    
+})
+
+
+local Tab2 = Window:MakeTab({
+Name = "Misc",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+Tab2:AddButton({
+	Name = "Hacker Admin",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/HackerAdminGames.lua"))()
+  	end    
+})
+
+
+local Tab3 = Window:MakeTab({
+Name = "Credit",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+
+
+local Section = Tab3:AddSection({
+Name = "Made by Hacker3331"
+})
+
+
+Tab3:AddButton({
+	Name = "Github",
+	Callback = function()
+      		setclipboard("github.com/Hacker3331")
+  	end    
+})
+
+
+OrionLib:Init()
