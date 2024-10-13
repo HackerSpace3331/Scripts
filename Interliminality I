@@ -67,8 +67,8 @@ Tab:AddButton({
 	Name = "Teleport elevator (Minigame 4)",
 	Callback = function()
       		local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
-         rootpart.CFrame = CFrame.new(309.955505, 3.61999583, 152.785004, -0.99965024, 2.75469265e-08, -0.0264456216, 2.98034131e-08, 1, -8.49313082e-08, 0.0264456216, -8.56897771e-08, -0.99965024)
-  	end    
+         rootpart.CFrame = game:GetService("Workspace").ExitElevator.WallPeices.Floor.CFrame
+        end
 })
 
 Tab:AddButton({
