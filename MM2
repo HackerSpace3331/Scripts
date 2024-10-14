@@ -37,7 +37,7 @@ Tab:AddButton({
             OrionLib:MakeNotification({
 	           Name = "Hacker Notification",
 	           Content = "Successfully added emote",
-	           Image = "rbxassetid://4483345998",
+	           Image = "rbxassetid://16103628265",
 	           Time = 6.5
             })
         end
