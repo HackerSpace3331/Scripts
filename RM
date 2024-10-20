@@ -85,6 +85,8 @@ Tab:AddButton({
          IsEnabled = "stalker" 
          })
 
+         ESP.stalker = true
+
          ESP:AddObjectListener(Workspace, {
          Name = "BloodZombie",
          CustomName = "Blood Skeleton",
