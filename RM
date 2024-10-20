@@ -61,7 +61,7 @@ Tab:AddButton({
          Time = 6.5
          })
 
-         while wait(5) do
+         while wait(3) do
       		ESP:AddObjectListener(Workspace, {
          Name = "Zombie",
          CustomName = "Skeleton NPC",
@@ -84,8 +84,15 @@ Tab:AddButton({
          Color = Color3.fromRGB(255, 0, 0), 
          IsEnabled = "stalker" 
          })
+
+         ESP:AddObjectListener(Workspace, {
+         Name = "BloodZombie",
+         CustomName = "Blood Skeleton",
+         Color = Color3.fromRGB(255, 0, 0), 
+         IsEnabled = "blood" 
+         })
      
-         ESP.stalker = true 
+         ESP.blood = true 
          end
   	end    
 })
