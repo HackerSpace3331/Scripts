@@ -107,7 +107,7 @@ Tab:AddButton({
       		ESP:AddObjectListener(Workspace.Halloween.Pumpkins, {
          Name = "Pumpkin",
          CustomName = "Pumpkin",
-         Color = Color3.fromRGB(0, 255, 0), 
+         Color = Color3.fromRGB(213, 107, 0), 
          IsEnabled = "pumb" 
          })
          ESP.pumb = true
@@ -239,7 +239,7 @@ Tab2:AddButton({
       		ESP:AddObjectListener(Workspace.Halloween.Pumpkins, {
          Name = "Pumpkin",
          CustomName = "Pumpkin",
-         Color = Color3.fromRGB(0, 255, 0), 
+         Color = Color3.fromRGB(213, 107, 0), 
          IsEnabled = "pumb" 
          })
          ESP.pumb = true
