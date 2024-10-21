@@ -54,11 +54,15 @@ end)
 Tab:AddButton({
 	Name = "Fullbright",
 	Callback = function()
-         Lighting.Brightness = 2
-	       Lighting.ClockTime = 14
-	       Lighting.FogEnd = 100000
-	       Lighting.GlobalShadows = false
-	       Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+
+         local Light = game:GetService("Lighting")
+
+         Light.Brightness = 2
+	       Light.ClockTime = 14
+	       Light.FogEnd = 100000
+	       Light.GlobalShadows = false
+	       Light.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+         end
   	end    
 })
 
@@ -177,11 +181,15 @@ end)
 Tab2:AddButton({
 	Name = "Fullbright",
 	Callback = function()
-         Lighting.Brightness = 2
-	       Lighting.ClockTime = 14
-	       Lighting.FogEnd = 100000
-	       Lighting.GlobalShadows = false
-	       Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+
+         local Light = game:GetService("Lighting")
+
+         Light.Brightness = 2
+	       Light.ClockTime = 14
+	       Light.FogEnd = 100000
+	       Light.GlobalShadows = false
+	       Light.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+         end
   	end    
 })
 
