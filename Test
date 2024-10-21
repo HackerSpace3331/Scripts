@@ -52,21 +52,6 @@ spawn(function()
 end)
 
 Tab:AddButton({
-	Name = "Fullbright",
-	Callback = function()
-
-         local Light = game:GetService("Lighting")
-
-         Light.Brightness = 2
-	       Light.ClockTime = 14
-	       Light.FogEnd = 100000
-	       Light.GlobalShadows = false
-	       Light.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
-         end
-  	end    
-})
-
-Tab:AddButton({
 	Name = "Entity ESP (Include Halloween NPC)",
 	Callback = function()
          OrionLib:MakeNotification({
@@ -177,21 +162,6 @@ spawn(function()
 		end
 	end
 end)
-
-Tab2:AddButton({
-	Name = "Fullbright",
-	Callback = function()
-
-         local Light = game:GetService("Lighting")
-
-         Light.Brightness = 2
-	       Light.ClockTime = 14
-	       Light.FogEnd = 100000
-	       Light.GlobalShadows = false
-	       Light.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
-         end
-  	end    
-})
 
 Tab2:AddButton({
 	Name = "Entity ESP (Include Halloween NPC)",
