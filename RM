@@ -25,6 +25,17 @@ Time = 10
 })
 
 
+local Fuel = Tab:AddLabel("Fuel")
+
+task.spawn(function()
+        while wait() do
+            pcall(function()
+Fuel:Set("Fuel : ".. game:GetService("Workspace").Shack.Generator.Fuel.Value)
+        end)
+    end
+end)
+
+
 Tab:AddToggle({
 	Name = "Player ESP",
 	Default = false,
@@ -107,6 +118,19 @@ Tab:AddButton({
          Image = "rbxassetid://16103628265",
          Time = 6.5
          })
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Wrench ESP (Only work while it get droped)",
+	Callback = function()
+      	 ESP:AddObjectListener(Workspace, {
+        Name = "Wrench",
+        CustomName = "WrenchDrop",
+        Color = Color3.fromRGB(0, 255, 0), 
+        IsEnabled = "wre" 
+        })
+        ESP.wre = true
   	end    
 })
 
