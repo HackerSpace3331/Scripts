@@ -25,6 +25,17 @@ Time = 10
 })
 
 
+local Fuel = Tab:AddLabel("Fuel")
+
+task.spawn(function()
+        while wait() do
+            pcall(function()
+Fuel:Set("Fuel : ".. game:GetService("Workspace").Shack.Generator.Fuel.Value)
+        end)
+    end
+end)
+
+
 Tab:AddToggle({
 	Name = "Player ESP",
 	Default = false,
