@@ -122,9 +122,8 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Wrench ESP",
+	Name = "Wrench ESP (Only work while it get droped)",
 	Callback = function()
-         while wait(3)
       	      ESP:AddObjectListener(Workspace, {
              Name = "Wrench",
              CustomName = "WrenchDrop",
@@ -132,7 +131,6 @@ Tab:AddButton({
              IsEnabled = "wre" 
              })
              ESP.wre = true
-         end
   	end    
 })
 
