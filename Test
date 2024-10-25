@@ -43,7 +43,7 @@ Tab:AddButton({
          Time = 6.5
          })
 
-         while wait(3) do
+         while wait(10) do
       		ESP:AddObjectListener(Workspace.ItemFolder, {
          Name = "Axe",
          CustomName = "Axe",
