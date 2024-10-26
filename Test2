@@ -1,6 +1,27 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
 local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Piggy", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
 
+_G.noclip = true
+
+
+function noclip()
+   while _G.noclip == true do
+   local Noclipping = nil
+	Clip = false
+	wait(0.1)
+	local function NoclipLoop()
+		if Clip == false and speaker.Character ~= nil then
+			for _, child in pairs(speaker.Character:GetDescendants()) do
+				if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
+					child.CanCollide = false
+				end
+			end
+		end
+	end
+	Noclipping = RunService.Stepped:Connect(NoclipLoop)
+end)
+end
+
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 
@@ -43,7 +64,7 @@ Tab:AddButton({
          Time = 6.5
          })
 
-         while wait(10) do
+         while wait(3) do
       		ESP:AddObjectListener(Workspace.ItemFolder, {
          Name = "Axe",
          CustomName = "Axe",
@@ -217,6 +238,15 @@ Tab:AddButton({
          ESP.chase2 = true 
          end
   	end    
+})
+
+Tab:AddToggle({
+	Name = "Noclip",
+	Default = false,
+	Callback = function(Value)
+		_G.noclip = Value
+                noclip()
+	end    
 })
 
 
