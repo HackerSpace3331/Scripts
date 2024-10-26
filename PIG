@@ -69,15 +69,6 @@ Tab:AddButton({
          ESP.pick = true 
 
          ESP:AddObjectListener(Workspace.ItemFolder, {
-         Name = "Medkit",
-         CustomName = "Medkit",
-         Color = Color3.fromRGB(0, 255, 0), 
-         IsEnabled = "med" 
-         })
-     
-         ESP.med = true
-
-         ESP:AddObjectListener(Workspace.ItemFolder, {
          Name = "BurlapBag",
          CustomName = "Bag",
          Color = Color3.fromRGB(0, 255, 0), 
