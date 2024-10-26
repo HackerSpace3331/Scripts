@@ -233,26 +233,6 @@ Tab:AddButton({
 })
 
 
-local Section = Tab:AddSection({
-	Name = "Player"
-})
-
-
-Tab:AddButton({
-	Name = "Speedboost",
-	Callback = function()
-      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Reset Speedboost",
-	Callback = function()
-      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-  	end    
-})
-
-
 local Tab2 = Window:MakeTab({
 Name = "Misc",
 Icon = "rbxassetid://4483345998",
