@@ -3,10 +3,8 @@ local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Piggy", HidePremium = f
 
 _G.noclip = true
 
-
 function noclip()
    while _G.noclip == true do
-   local Noclipping = nil
 	Clip = false
 	wait(0.1)
 	local function NoclipLoop()
@@ -19,7 +17,7 @@ function noclip()
 		end
 	end
 	Noclipping = RunService.Stepped:Connect(NoclipLoop)
-end)
+    end)
 end
 
 -- loadstring
