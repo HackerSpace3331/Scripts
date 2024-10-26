@@ -242,14 +242,14 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "Speedboost",
 	Callback = function()
-      		game.Players.LocalPlayer.Character.Humanoid.Walkspeed = 25
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
   	end    
 })
 
 Tab:AddButton({
 	Name = "Reset Speedboost",
 	Callback = function()
-      		game.Players.LocalPlayer.Character.Humanoid.Walkspeed = 16
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
   	end    
 })
 
