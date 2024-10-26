@@ -38,7 +38,7 @@ Tab:AddButton({
 	Callback = function()
          OrionLib:MakeNotification({
          Name = "Hacker Notification",
-         Content = "Item ESP has activated!",
+         Content = "Item ESP has activated! Wait 10 seconds",
          Image = "rbxassetid://16103628265",
          Time = 6.5
          })
@@ -185,16 +185,16 @@ Tab:AddButton({
 	Callback = function()
          OrionLib:MakeNotification({
          Name = "Hacker Notification",
-         Content = "Monster ESP has activated!",
+         Content = "Monster ESP has activated! Wait 5 second",
          Image = "rbxassetid://16103628265",
          Time = 6.5
          })
 
-         while wait(3) do
+         while wait(5) do
       		ESP:AddObjectListener(Workspace.Bunny.Events.Infected.ActiveNPCS, {
          Name = "Infected",
-         CustomName = "Infected",
-         Color = Color3.fromRGB(194, 0, 0), 
+         CustomName = "Monster",
+         Color = Color3.fromRGB(255, 0, 0), 
          IsEnabled = "mons" 
          })
          ESP.mons = true
@@ -219,15 +219,54 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "FOV (120)",
+	Callback = function()
+      		game.Workspace.Camera.FieldOfView = 120
+  	end    
+})
 
-local Tab3 = Window:MakeTab({
+Tab:AddButton({
+	Name = "Reset FOV",
+	Callback = function()
+      		game.Workspace.Camera.FieldOfView = 85
+  	end    
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Player"
+})
+
+
+Tab:AddButton({
+	Name = "Speedboost",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Reset Speedboost",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+  	end    
+})
+
+
+local Tab2 = Window:MakeTab({
 Name = "Misc",
 Icon = "rbxassetid://4483345998",
 PremiumOnly = false
 })
 
 
-Tab3:AddButton({
+local Section = Tab2:AddSection({
+	Name = "CMD Avaible : fly, noclip, fb, unnoclip"
+})
+
+
+Tab2:AddButton({
 	Name = "Hacker Admin",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hacker3331/HackerHub-Games/main/HackerAdminGames.lua"))()
@@ -235,19 +274,19 @@ Tab3:AddButton({
 })
 
 
-local Tab4 = Window:MakeTab({
+local Tab3 = Window:MakeTab({
 Name = "Credit",
 Icon = "rbxassetid://4483345998",
 PremiumOnly = false
 })
 
 
-local Section = Tab4:AddSection({
+local Section = Tab3:AddSection({
 Name = "Made by Hacker3331"
 })
 
 
-Tab4:AddButton({
+Tab3:AddButton({
 	Name = "Github",
 	Callback = function()
       		setclipboard("github.com/Hacker3331")
