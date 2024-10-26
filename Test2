@@ -1,10 +1,8 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
 local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Piggy", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
 
-_G.FOV = true
-
 function fov()
-   while _G.FOV == true do
+   while _G.FOV do
       game.Workspace.Camera.FieldOfView = 120
       wait(5)
    end
