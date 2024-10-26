@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Piggy", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Piggy", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub Piggy"})
 
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
