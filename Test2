@@ -1,25 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
 local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Piggy", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
 
-_G.noclip = true
-
-function noclip()
-   while _G.noclip == true do
-	Clip = false
-	wait(0.1)
-	local function NoclipLoop()
-		if Clip == false and speaker.Character ~= nil then
-			for _, child in pairs(speaker.Character:GetDescendants()) do
-				if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
-					child.CanCollide = false
-				end
-			end
-		end
-	end
-	Noclipping = RunService.Stepped:Connect(NoclipLoop)
-    end)
-end
-
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 
@@ -242,8 +223,27 @@ Tab:AddToggle({
 	Name = "Noclip",
 	Default = false,
 	Callback = function(Value)
-		_G.noclip = Value
-                noclip()
+		if Value then
+			Clip = false
+			task.wait(0.1)
+			local function NoclipLoop()
+				if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+					for _, child in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+						if child:IsA("BasePart") and child.CanCollide == true then
+							child.CanCollide = false
+						end
+					end
+				end
+			end
+			Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop)
+		else
+			if Noclipping then
+				Noclipping:Disconnect()
+			end
+			Clip = true
+		end
+	end,
+})
 	end    
 })
 
