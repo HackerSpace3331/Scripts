@@ -38,13 +38,12 @@ Tab:AddButton({
 	Callback = function()
          OrionLib:MakeNotification({
          Name = "Hacker Notification",
-         Content = "Item ESP has activated! Wait 10 seconds",
+         Content = "Item ESP has activated!",
          Image = "rbxassetid://16103628265",
          Time = 6.5
          })
 
-         while wait(10) do
-      		ESP:AddObjectListener(Workspace.ItemFolder, {
+      	ESP:AddObjectListener(Workspace.ItemFolder, {
          Name = "Axe",
          CustomName = "Axe",
          Color = Color3.fromRGB(0, 255, 0), 
@@ -176,8 +175,7 @@ Tab:AddButton({
          })
      
          ESP.val = true  
-         end
-  	end    
+   end    
 })
 
 Tab:AddButton({
@@ -186,11 +184,13 @@ Tab:AddButton({
 
          OrionLib:MakeNotification({
          Name = "Hacker Notification",
-         Content = "Monster ESP has activated!",
+         Content = "Monster ESP has activated! Wait 6 seconds",
          Image = "rbxassetid://16103628265",
          Time = 6.5
          })
 
+
+         while wait(6) do
       	ESP:AddObjectListener(Workspace.Bunny.Events.Infected.ActiveNPCS, {
          Name = "Infected",
          CustomName = "Monster",
