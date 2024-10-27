@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Piggy", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Piggy", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub Piggy"})
 
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
@@ -43,8 +43,7 @@ Tab:AddButton({
          Time = 6.5
          })
 
-         while wait(10) do
-      		ESP:AddObjectListener(Workspace.ItemFolder, {
+      	ESP:AddObjectListener(Workspace.ItemFolder, {
          Name = "Axe",
          CustomName = "Axe",
          Color = Color3.fromRGB(0, 255, 0), 
@@ -68,15 +67,6 @@ Tab:AddButton({
          })
      
          ESP.pick = true 
-
-         ESP:AddObjectListener(Workspace.ItemFolder, {
-         Name = "Medkit",
-         CustomName = "Medkit",
-         Color = Color3.fromRGB(0, 255, 0), 
-         IsEnabled = "med" 
-         })
-     
-         ESP.med = true
 
          ESP:AddObjectListener(Workspace.ItemFolder, {
          Name = "BurlapBag",
@@ -167,22 +157,13 @@ Tab:AddButton({
          })
      
          ESP.key5 = true
-
-         ESP:AddObjectListener(Workspace.Bunny.Events.SteamEvent.ValveModel, {
-         Name = "Valve",
-         CustomName = "Valve",
-         Color = Color3.fromRGB(0, 255, 0), 
-         IsEnabled = "val" 
-         })
-     
-         ESP.val = true  
-         end
-  	end    
+   end    
 })
 
 Tab:AddButton({
 	Name = "Monster ESP",
 	Callback = function()
+
          OrionLib:MakeNotification({
          Name = "Hacker Notification",
          Content = "Monster ESP has activated!",
@@ -190,14 +171,6 @@ Tab:AddButton({
          Time = 6.5
          })
 
-         while wait(3) do
-      		ESP:AddObjectListener(Workspace.Bunny.Events.Infected.ActiveNPCS, {
-         Name = "Infected",
-         CustomName = "Monster",
-         Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "mons" 
-         })
-         ESP.mons = true
 
          ESP:AddObjectListener(Workspace.Bunny.Events.Chase1Event, {
          Name = "RabbitMonster",
@@ -215,6 +188,15 @@ Tab:AddButton({
          })
      
          ESP.chase2 = true 
+
+         while wait(6) do
+         ESP:AddObjectListener(Workspace.Bunny.Events.Infected.ActiveNPCS, {
+         Name = "Infected",
+         CustomName = "Monster",
+         Color = Color3.fromRGB(255, 0, 0), 
+         IsEnabled = "mons" 
+         })
+         ESP.mons = true
          end
   	end    
 })
@@ -233,23 +215,20 @@ Tab:AddButton({
   	end    
 })
 
-
-local Section = Tab:AddSection({
-	Name = "Player"
-})
-
-
 Tab:AddButton({
-	Name = "Speedboost",
+	Name = "Fullbright",
 	Callback = function()
-      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
-  	end    
-})
+      		local Light = game:GetService("Lighting")
 
-Tab:AddButton({
-	Name = "Reset Speedboost",
-	Callback = function()
-      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+                function dofullbright()
+                Light.Ambient = Color3.new(1, 1, 1)
+                Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+                Light.ColorShift_Top = Color3.new(1, 1, 1)
+                end
+
+                dofullbright()
+
+                Light.LightingChanged:Connect(dofullbright)
   	end    
 })
 
@@ -262,7 +241,7 @@ PremiumOnly = false
 
 
 local Section = Tab2:AddSection({
-	Name = "CMD Avaible : fly, noclip, fb, unnoclip"
+	Name = "CMD Avaible : fly, noclip, unnoclip"
 })
 
 
