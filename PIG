@@ -36,12 +36,14 @@ Tab:AddToggle({
 Tab:AddButton({
 	Name = "Item ESP",
 	Callback = function()
+
          OrionLib:MakeNotification({
          Name = "Hacker Notification",
          Content = "Item ESP has activated!",
          Image = "rbxassetid://16103628265",
          Time = 6.5
          })
+
 
       	ESP:AddObjectListener(Workspace.ItemFolder, {
          Name = "Axe",
