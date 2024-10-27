@@ -157,15 +157,6 @@ Tab:AddButton({
          })
      
          ESP.key5 = true
-
-         ESP:AddObjectListener(Workspace.Bunny.Events.SteamEvent.ValveModel, {
-         Name = "Valve",
-         CustomName = "Valve",
-         Color = Color3.fromRGB(0, 255, 0), 
-         IsEnabled = "val" 
-         })
-     
-         ESP.val = true  
    end    
 })
 
