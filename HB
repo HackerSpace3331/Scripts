@@ -1,0 +1,18 @@
+-- loadstring
+local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+
+-- config
+ESP.Players = true
+ESP.Boxes = false
+ESP.Names = true
+ESP:Toggle(true)
+
+while wait(3) do
+ESP:AddObjectListener(Workspace.Effects.PropRig, {
+    Name = "DoorModel",
+    CustomName = "Door's Candy",
+    Color = Color3.fromRGB(0, 255, 0), 
+    IsEnabled = "door" 
+})
+ESP.door = true
+end
