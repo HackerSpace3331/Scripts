@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Residence Massacre [All Night]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | [XMAS] Residence Massacre (All Night)", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
 
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
@@ -76,7 +76,7 @@ Tab:AddButton({
       		ESP:AddObjectListener(Workspace.Christmas.Elfs, {
          Name = "Elf",
          CustomName = "Elf",
-         Color = Color3.fromRGB(0, 0, 255), 
+         Color = Color3.fromRGB(0, 255, 0), 
          IsEnabled = "elf" 
          })
          ESP.elf = true
@@ -165,30 +165,21 @@ Tab2:AddButton({
          })
 
          while wait(3) do
-      		ESP:AddObjectListener(Workspace.Christmas.Elfs, {
-         Name = "Elf",
-         CustomName = "Elf",
-         Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "elf" 
-         })
-         ESP.elf = true
+             ESP:AddObjectListener(Workspace, {
+             Name = "Mutant",
+             CustomName = "Larry Mutated",
+             Color = Color3.fromRGB(255, 0, 0), 
+             IsEnabled = "entity" 
+             })
+             ESP.entity = true
 
-         ESP:AddObjectListener(Workspace, {
-         Name = "Mutant",
-         CustomName = "Larry Mutated",
-         Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "entity" 
-         })
-         ESP.entity = true
-
-         ESP:AddObjectListener(Workspace, {
-         Name = "Stalker",
-         CustomName = "Stalker",
-         Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "stalker" 
-         })
-
-         ESP.stalker = true
+             ESP:AddObjectListener(Workspace, {
+             Name = "Stalker",
+             CustomName = "Stalker",
+             Color = Color3.fromRGB(255, 0, 0), 
+             IsEnabled = "stalker" 
+             })
+             ESP.stalker = true
          end
   	end    
 })
