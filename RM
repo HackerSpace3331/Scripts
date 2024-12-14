@@ -165,15 +165,7 @@ Tab2:AddButton({
          })
 
          while wait(3) do
-      		ESP:AddObjectListener(Workspace.Christmas.Elfs, {
-         Name = "Elf",
-         CustomName = "Elf",
-         Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "elf" 
-         })
-         ESP.elf = true
-
-         ESP:AddObjectListener(Workspace, {
+             ESP:AddObjectListener(Workspace, {
          Name = "Mutant",
          CustomName = "Larry Mutated",
          Color = Color3.fromRGB(255, 0, 0), 
