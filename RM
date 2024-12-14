@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-local Window = OrionLib:MakeWindow({Name = "Hacker Hub | Residence Massacre [All Night]", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
+local Window = OrionLib:MakeWindow({Name = "Hacker Hub | [XMAS] Residence Massacre (All Night)", HidePremium = false, IntroText = "Hacker Hub, Loading...", SaveConfig = true, ConfigFolder = "HackerHub RM"})
 
 -- loadstring
 local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
@@ -63,7 +63,7 @@ spawn(function()
 end)
 
 Tab:AddButton({
-	Name = "Entity ESP (Include Halloween NPC)",
+	Name = "Entity ESP (Include Cristmast NPC)",
 	Callback = function()
          OrionLib:MakeNotification({
          Name = "Hacker Notification",
@@ -73,51 +73,31 @@ Tab:AddButton({
          })
 
          while wait(3) do
-      		ESP:AddObjectListener(Workspace, {
-         Name = "Zombie",
-         CustomName = "Zombie",
-         Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "zom" 
+      		ESP:AddObjectListener(Workspace.Christmas.Elfs, {
+         Name = "Elf",
+         CustomName = "Elf",
+         Color = Color3.fromRGB(0, 255, 0), 
+         IsEnabled = "elf" 
          })
-         ESP.zom = true
+         ESP.elf = true
 
          ESP:AddObjectListener(Workspace, {
          Name = "Mutant",
-         CustomName = "Larry",
+         CustomName = "Larry Mutated",
          Color = Color3.fromRGB(255, 0, 0), 
          IsEnabled = "entity" 
          })
          ESP.entity = true
 
          ESP:AddObjectListener(Workspace, {
-         Name = "BloodZombie",
-         CustomName = "Blood Zombie",
+         Name = "Stalker",
+         CustomName = "Stalker",
          Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "blood" 
+         IsEnabled = "stalker" 
          })
-     
-         ESP.blood = true 
+
+         ESP.stalker = true
          end
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Pumpkin ESP",
-	Callback = function()
-      		ESP:AddObjectListener(Workspace.Halloween.Pumpkins, {
-         Name = "Pumpkin",
-         CustomName = "Pumpkin",
-         Color = Color3.fromRGB(213, 107, 0), 
-         IsEnabled = "pumb" 
-         })
-         ESP.pumb = true
-
-         OrionLib:MakeNotification({
-         Name = "Hacker Notification",
-         Content = "Pumpkin ESP has activated! be careful with the trick one..",
-         Image = "rbxassetid://16103628265",
-         Time = 6.5
-         })
   	end    
 })
 
@@ -175,7 +155,7 @@ spawn(function()
 end)
 
 Tab2:AddButton({
-	Name = "Entity ESP (Include Halloween NPC)",
+	Name = "Entity ESP (Include Cristmast NPC)",
 	Callback = function()
          OrionLib:MakeNotification({
          Name = "Hacker Notification",
@@ -185,13 +165,13 @@ Tab2:AddButton({
          })
 
          while wait(3) do
-      		ESP:AddObjectListener(Workspace, {
-         Name = "Zombie",
-         CustomName = "Skeleton NPC",
+      		ESP:AddObjectListener(Workspace.Christmas.Elfs, {
+         Name = "Elf",
+         CustomName = "Elf",
          Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "zom" 
+         IsEnabled = "elf" 
          })
-         ESP.zom = true
+         ESP.elf = true
 
          ESP:AddObjectListener(Workspace, {
          Name = "Mutant",
@@ -209,36 +189,7 @@ Tab2:AddButton({
          })
 
          ESP.stalker = true
-
-         ESP:AddObjectListener(Workspace, {
-         Name = "BloodZombie",
-         CustomName = "Blood Skeleton",
-         Color = Color3.fromRGB(255, 0, 0), 
-         IsEnabled = "blood" 
-         })
-     
-         ESP.blood = true 
          end
-  	end    
-})
-
-Tab2:AddButton({
-	Name = "Pumpkin ESP",
-	Callback = function()
-      		ESP:AddObjectListener(Workspace.Halloween.Pumpkins, {
-         Name = "Pumpkin",
-         CustomName = "Pumpkin",
-         Color = Color3.fromRGB(213, 107, 0), 
-         IsEnabled = "pumb" 
-         })
-         ESP.pumb = true
-
-         OrionLib:MakeNotification({
-         Name = "Hacker Notification",
-         Content = "Pumpkin ESP has activated! be careful with the trick one..",
-         Image = "rbxassetid://16103628265",
-         Time = 6.5
-         })
   	end    
 })
 
