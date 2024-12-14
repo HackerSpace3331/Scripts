@@ -62,7 +62,7 @@ spawn(function()
 	end
 end)
 
-Tab2:AddButton({
+Tab:AddButton({
 	Name = "Entity ESP (Include Cristmast NPC)",
 	Callback = function()
          OrionLib:MakeNotification({
